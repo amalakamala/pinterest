@@ -1,0 +1,57 @@
+/*--------- HEADER ---------*/
+@mixin buscar(){
+	background-color: $grisFondo;
+	border-radius: 3px;
+	width: 850px;
+	height: 40px;
+	display:inline-block;
+}
+@mixin inputBuscar(){
+	margin: 5px 0;
+	background-color: transparent;
+	width: 70%;
+	padding: 6px;
+	border: transparent;
+	font-size: 15px;
+}
+@mixin textoPines(){
+	display:inline-block;
+	margin:0;	
+	margin-left: 20px;
+	color: $grisTextos;
+	font-size: 15px;
+}
+@mixin iconDown(){
+	display:inline-block;
+	margin-left: 5px;
+	color: $grisIconos;
+	font-size: 20px;
+	font-weight:600;
+	position:relative;
+	top:2px;
+}
+@mixin imgUser(){
+	display:inline-block;
+	width: 40px;
+	border-radius: 50%;
+	position: relative;
+    top: 10px;
+    margin: 0 5px 0 20px;
+}
+@mixin hoverCir(){
+	background-color:transparent;
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+	position: relative;	
+}	
+/*--------- SECTION ---------*/
+@mixin cajaBlur(){
+	height: 50px;	
+	border-radius: 6px;
+	position: absolute;	
+}
+@mixin parrafoIc(){
+	position:relative;
+	color:#FFF;
+}

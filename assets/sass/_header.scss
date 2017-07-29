@@ -4,6 +4,8 @@ body{
 	font-family: 'Open Sans', sans-serif;
 }
 header{
+	position: relative;
+    top: -30px;
 	margin-top: 5px;
 	.logo{
 		display:inline-block;
@@ -15,58 +17,81 @@ header{
 	}
 	.inicio{
 		display:inline-block;
-		color: #A7A7A7;
+		color: $grisIconos;
 		margin-right: 20px;
 	}
 	.caja-buscar{
-		background-color: #EBEBEB;
-		border-radius: 3px;
-		width: 750px;
-		height: 40px;
-		display:inline-block;
+		@include  buscar();
 		.fa-search{
 			margin-left: 15px;
-			color: #A7A7A7;
+			color: $grisIconos;
 		}
 		input{
-			margin: 5px 0;
-		    background-color: transparent;
-		    width: 67%;
-		    padding: 6px;
-		    border: transparent;
-		    font-size: 15px;
+		@include inputBuscar();
 		}
 		.buscador:focus{
 			outline: none;
 		}
 		.fa-times{
 			margin-left: 15px;
-			color: #A7A7A7;
+			color: $grisIconos;
 		}
 		.caja-pines{
 			display:inline-block;
 			border-left: 1px solid #CFCFCF;
 			p{
-				display:inline-block;
-				margin:0;	
-				margin-left: 20px;
-				color: #626262;
-				font-size: 15px;
+				@include textoPines();
 			}
 			.fa-angle-down{
-				display:inline-block;
-				margin-left: 5px;
-				color: #A7A7A7;
+				@include iconDown();
 			}
 		}
 	}
 	.usuario{
 		display:inline-block;
+		img{
+			@include imgUser();
+		}
+		p{
+			display:inline-block;	
+			color: $grisIconos;
+		}
 	}
 	.nav-collapse{
 		display:inline-block;
+		.fa-bars{
+			margin-left: 40px;
+			color: $grisIconos;
+			font-weight: 600;	
+			font-size:25px;		
+		}
+		.sombra-hover{
+			@include hoverCir();
+		    left: 26px;
+		    top: 36px;
+		}
+		.sombra-hover:hover{
+			background-color: $colorhover;	
+		}
 	}
 	.commen{
 		display:inline-block;
+		.fa-commenting{
+			margin-left: 30px;
+			color: $grisIconos;
+			font-weight: 600;
+			font-size:25px;				
+		}
+		.sombra-hover{
+			@include hoverCir();
+		    top: 37px;
+		    left: 17px;
+		}
+		.sombra-hover:hover{
+			background-color: $colorhover;
+		}
+	}
+	hr{
+		border-color: $colorhover;
 	}
 }

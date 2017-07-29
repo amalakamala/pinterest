@@ -5,9 +5,11 @@
 	<title>Pinteres</title>
 	<!-- Fontawesome -->
 	<script src="https://use.fontawesome.com/b5fd719f9b.js"></script>
+	<!--favicon-->
+	<link rel="icon" href="dist/img/favicon.ico" type="image/x-icon"/>    	
 	<!-- Font -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<!-- CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">	
+	<!-- CSS -->	
 	<link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body>
@@ -23,29 +25,92 @@
 			<a href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
 			<div class="caja-pines">
 				<p>Todos los Pines</p>
-				<i class="fa fa-angle-down" aria-hidden="true"></i>
+				<a href="#"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
 			</div>
 		</div>
 		<div class="usuario">
-			<img src="" alt="">
+			<img src="dist/img/alexandra.jpg" alt="">
 			<p>Alexandra</p>
 		</div>
 		<div class="nav-collapse">
+			<div class="sombra-hover"></div>
 			<i class="fa fa-bars" aria-hidden="true"></i>
 		</div>
 		<div class="commen">
+			<div class="sombra-hover"></div>
 			<i class="fa fa-commenting" aria-hidden="true"></i>
 		</div>
 		<hr>
 	</header>
+	<!-- section iconos -->
+	<section class="iconos-img">
+		<div class="caja-img">
+			<div class="blur"></div>
+			<img src="dist/img/1.jpg" alt="">
+			<p>Dress</p>
+		</div>
+		<div class="caja-img-dos">
+			<div class="blur"></div>
+			<img src="dist/img/5.jpg" alt="">
+			<p>San Miguel De Allende</p>
+		</div>
+		<div class="caja-img-tres">
+			<div class="blur"></div>
+			<img src="dist/img/18.jpg" alt="">
+			<p>Friki</p>
+		</div>	
+		<div class="caja-img">
+			<div class="blur"></div>
+			<img src="dist/img/30.jpg" alt="">
+			<p>Boda</p>
+		</div>	
+		<div class="caja-img-cuatro">
+			<div class="blur"></div>
+			<img src="dist/img/20.jpg" alt="">
+			<p>Vestidos</p>
+		</div>	
+		<div class="caja-img">
+			<div class="blur"></div>
+			<img src="dist/img/40.jpg" alt="">
+			<p>Ramo</p>
+		</div>
+		<div class="caja-img-tres">
+			<div class="blur"></div>
+			<img src="dist/img/18.jpg" alt="">
+			<p>Día</p>
+		</div>	
+		<div class="caja-img-dos">
+			<div class="blur"></div>
+			<img src="dist/img/5.jpg" alt="">
+			<p>Las Fotografías Boda</p>
+		</div>										
+	</section>
 	<!-- section otros -->
 	<section class="cuerpo">
+
 		<!-- Json -->
-		<section class="">
-			
+		<section class="el-json" id="columns">
+			<div class="contenedor">
+				<img src="dist/img/2.jpg" alt="">
+				<div class="text-contenedor">
+					<div class="titulo">
+						<h5>`+ json.title +`</h5>
+						<span>36,6k</span>
+						<span>36,6k</span>
+					</div>
+					<div class="description">
+						<p>`+json.description+`</p>
+					</div>
+					<div class="user">
+						<span>M</span>
+						<p>`+json.username+`" #"`+ json.hashtag +`</p>
+					</div>
+				</div>
+			</div>												
 		</section>
 	</section>
 
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<!-- JS -->
 	<script src="dist/js/script.js"></script>
 </body>

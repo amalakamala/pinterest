@@ -1,0 +1,84 @@
+.iconos-img{
+	margin: 0 120px;
+	height:50px;
+	.caja-img{
+		width: 100px;
+		height:50px;
+		display: inline-block;
+		.blur{
+			background-color: $colorIconsDos;
+			width:100px;
+			@include cajaBlur();				
+		}
+		img{
+			width:100px;
+			height: 50px;
+			border-radius: 6px;
+		}
+		p{
+			@include parrafoIc();			
+			top: -55px;
+			left: 30px;
+		}
+	}
+	.caja-img-dos{
+		width: 200px;
+		height:50px;
+		display: inline-block;
+		.blur{
+			background-color: $colorIcoTres;
+			width:200px;
+			@include cajaBlur();				
+		}
+		img{
+			width:200px;
+			height: 50px;
+			border-radius: 6px;
+		}
+		p{
+			@include parrafoIc();			
+			top: -55px;
+			left: 17px;
+		}
+	}	
+	.caja-img-tres{
+		width: 80px;
+		height:50px;
+		display: inline-block;
+		.blur{
+			background-color: $colorIconsDos;
+			width:80px;
+			@include cajaBlur();					
+		}
+		img{
+			width:80px;
+			height: 50px;
+			border-radius: 6px;
+		}
+		p{
+			@include parrafoIc();			
+			top: -55px;
+			left: 25px;
+		}
+	}
+	.caja-img-cuatro{
+		width: 120px;
+		height:50px;
+		display: inline-block;
+		.blur{
+			background-color: $colorIconsDos;
+			width:120px;
+			@include cajaBlur();				
+		}
+		img{
+			width:120px;
+			height: 50px;
+			border-radius: 6px;
+		}
+		p{
+			@include parrafoIc();
+			top: -55px;
+			left: 30px;
+		}
+	}		
+}
