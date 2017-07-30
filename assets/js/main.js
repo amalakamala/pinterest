@@ -17,10 +17,10 @@ var llenarModal = function(elId,url,title,des,user,hastag){
 			$('#proyecto-modal').removeClass('hide');
 			$("#proyecto-modal .modal-completo").empty();
 			$("#proyecto-modal .modal-completo").append("<div class='close'>X</div>");
-			$("#proyecto-modal .modal-completo").append("<img src='dist/img/"+ url +"' id='img-"+elId+"'  alt=''>");
+			$("#proyecto-modal .modal-completo").append("<div class='caja'><img src='dist/img/"+ url +"' id='img-"+elId+"'  alt=''>");
 			$("#proyecto-modal .modal-completo").append("<h4>"+ title +"</h4>");
 			$("#proyecto-modal .modal-completo").append("<p>" + des + "</p>");
-			$("#proyecto-modal .modal-completo").append("<p>" + user + "</p>");
+			$("#proyecto-modal .modal-completo").append("<p>" + user + "</p></div>");
 			$(".close").click(function(event) {
 				$("#proyecto-modal").addClass('hide');
 			});		
