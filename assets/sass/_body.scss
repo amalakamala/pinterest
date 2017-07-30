@@ -13,8 +13,81 @@
 				border-radius: 10px;
 			}
 			.text-contenedor{
-				
+				margin-bottom: 5px;
+				clear: both;
+				.likes{
+					span{						
+						position: relative;
+    					left: 60%;
+    					margin: 0;
+						font-size:10px;
+						color: $grisTextos;
+						.fa-check{
+							font-size: 8px;
+							display: inline-block;
+						}
+					}	
+
+				}
+				.titulo{
+					h5{
+						float: left;
+						width: 190px;
+						height: auto;
+						margin: 0;
+						font-size: 14px;
+					}
+				}
+				.description{
+					margin-top: 40px;
+					font-size: 12px;
+				}
+				.user{
+					span{
+						background-color:#ECC2B9;
+						padding: 7px 10px;
+						border-radius:50%;
+						color: #FFF;
+						font-weight:700;
+						font-size:14px;
+						float:left;
+						margin-right:5px;
+					}
+					.name{
+						font-weight:700;
+						width:60px;
+						word-break: break-all;
+					}
+					p{
+						font-size:10px;
+						margin-right:5px;
+						float:left;
+					}
+				}
 			}
 		}
+	}
+}
+
+.hide{
+	display: none;
+}
+
+#proyecto-modal{
+	background-color: white; 
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: scroll;
+	z-index: 1200;
+	.close{
+		color: #7F7F7F; 
+		position: absolute;
+	    right: 3%;
+	    top: 3%;
+		font-size: 25px;
+		cursor: pointer;
 	}
 }
