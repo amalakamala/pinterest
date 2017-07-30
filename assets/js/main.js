@@ -64,8 +64,10 @@ $(document).ready(function(){
 		llenarModal(id,url,title,des,user,hastag);
 	});
 	*/
-
-	descripcion.forEach(function(e){
+	
+	//Slice genera un nuevo arreglo del indice 0 al 20
+	var veinte = descripcion.slice(0, 20);
+	veinte.forEach(function(e){
 		var elId = e.id;	
 		var url = e.image_url;
 		var title = e.title;
@@ -97,6 +99,47 @@ $(document).ready(function(){
 		$('#img-'+ elId ).click(function(){
 			llenarModal(elId,url,title,des,user,hastag);
 		});		
+	});
+
+
+
+	$(window).scroll(function(){
+		if ($(window).scrollTop() == $(document).height() - $(window).height()){
+			var otrosVeinte = descripcion.slice(20, 40);
+			otrosVeinte.forEach(function(e){
+				var elId = e.id;	
+				var url = e.image_url;
+				var title = e.title;
+				var des = e.description;
+				var user = e.username; 
+				var hastag = e.hashtag;
+				$('#caja-json').append(`
+					<div class="contenedor" id="`+e.id+`">
+						<img src="dist/img/`+e.image_url+`" class="img-pint" id="img-`+ elId +`"  alt="">
+						<div class="text-contenedor">
+							<div class="likes">
+								<span><i class="fa fa-thumb-tack" aria-hidden="true"></i> 36,6k</span>
+								<span><i class="fa fa-check" aria-hidden="true"></i> 6</span>
+							</div>
+							<div class="titulo">
+								<h5>`+ e.title +`</h5>
+							</div>
+							<div class="description">
+								<p>`+ e.description +`</p>
+							</div>
+							<div class="user">
+								<span>M</span>
+								<p class="name">`+ e.username +`</p>
+								<p>#`+ e.hashtag +`</p>
+							</div>
+						</div>
+					</div>`
+				);	
+				$('#img-'+ elId ).click(function(){
+					llenarModal(elId,url,title,des,user,hastag);
+				});		
+			});
+		}					
 	});
 
 });
