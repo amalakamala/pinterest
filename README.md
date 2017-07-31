@@ -22,6 +22,4 @@ El proyecto fue realizado con las siguientes dependencias NPM:
 + Correr gulp para que se realizen las tareas especificadas.
 
 
-![alt text](https://raw.githubusercontent.com/amakamala/printerest/master/dist/img/desktop.png)
-![alt text](https://raw.githubusercontent.com/amakamala/printerest/master/dist/img/modal.png)
 
