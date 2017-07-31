@@ -6,9 +6,9 @@ El proyecto fue realizado con las siguientes dependencias NPM:
   - Gulp `~v.3.9.1`
   - Gulp-Concat `~v.2.6.1`
   - Gulp-Minify-CSS `~v.1.2.4`
-  - Gulp-Sass ~v.3.1.0`
+  - Gulp-Sass `~v.3.1.0`
   - Gulp-Uglify `~v.3.0.0`
-  - Gulp-Watch `~v.4.3.11
+  - Gulp-Watch `~v.4.3.11`
   - Gulp-Watch `~v.0.9.1`
   
 + Dependencias de Producción 
