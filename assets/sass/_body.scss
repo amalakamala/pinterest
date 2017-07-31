@@ -3,10 +3,7 @@
 	padding: 30px 0;
 	.el-json{
 		.contenedor{
-			float: left;
-			width: 18%;		
-			margin-right: 2%;	
-			margin-bottom:10px;
+			@include contenedorJ();
 			img{
 				max-width: 100%;	
      			height:auto;				
@@ -16,26 +13,17 @@
 				margin-bottom: 5px;
 				clear: both;
 				.likes{
-					span{						
-						position: relative;
-    					left: 60%;
-    					margin: 0;
-						font-size:10px;
-						color: $grisTextos;
+					span{		
+						@include likesSpan();				
 						.fa-check{
 							font-size: 8px;
 							display: inline-block;
 						}
 					}	
-
 				}
 				.titulo{
 					h5{
-						float: left;
-						width: 190px;
-						height: auto;
-						margin: 0;
-						font-size: 14px;
+						@include tituloHcinco();
 					}
 				}
 				.description{
@@ -44,14 +32,7 @@
 				}
 				.user{
 					span{
-						background-color:#ECC2B9;
-						padding: 7px 10px;
-						border-radius:50%;
-						color: #FFF;
-						font-weight:700;
-						font-size:14px;
-						float:left;
-						margin-right:5px;
+						@include userSpan();
 					}
 					.name{
 						font-weight:700;
@@ -74,31 +55,28 @@
 }
 
 #proyecto-modal{
-	background-color: $grisFondo; 
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	overflow: scroll;
-	z-index: 1200;
+	@include pModal();
 	.close{
-		color: #7F7F7F; 
+	@include pClose();
+	}
+	.mas{
 		position: absolute;
-	    right: 3%;
-	    top: 3%;
-		font-size: 25px;
-		cursor: pointer;
+	    right: 20px;
+	    top: 50%;
+	    background-color: #FFF;
+	    border-radius: 50%;
+	    padding: 5px 10px;
+	}
+	.intr{
+		position: absolute;
+	    right: 20px;
+	    top: 57%;
+	    background-color: #FFF;
+	    border-radius: 50%;
+    	padding: 3px 10px;	
 	}
 	.caja-modal{
-		background-color:#FFF;
-		width: 400px;
-		height: auto;
-		position: relative;
-		left:35%;
-		margin-top: 50px;
-		margin-bottom:50px;
-		padding: 20px;
+	@include cajaM();
 		.iconos-top{
 			padding: 0 20px;
 			.fa{
@@ -111,11 +89,7 @@
 				position: relative;
 				left:45%;
 				a{
-					background-color:$colorbtn;
-					padding: 10px;
-					color:#FFF;
-					text-decoration:none;
-					border-radius:6px;
+					@include guardarA();
 					.fa{
 						margin-right:5px;
 						color: #FFF;						
@@ -133,23 +107,13 @@
 			width: 350px;
 			height: auto;
 			img{
-				width: 100%;
-				background-size: cover;
-				margin:0 20px 20px;
-				border-radius: 6px;
+				@include modalImg();
 			}
 		}
 		.usuario{
 			margin: 20px 10px;
 			span{
-				background-color:#ECC2B9;
-				padding: 7px 10px;
-				border-radius:50%;
-				color: #FFF;
-				font-weight:700;
-				font-size:14px;
-				float:left;
-				margin-right:5px;
+				@include spanUsuario();
 			}
 			.name{
 				font-weight:700;
@@ -163,12 +127,7 @@
 		}
 		.leer{
 			a{
-				background-color:#EBEBEB;
-				color: #626262;
-				text-decoration:none;
-				border-radius:6px;
-				padding: 5px 10px;
-				float:right;
+				@include leerA();
 			}
 		}			
 		.descripcion{

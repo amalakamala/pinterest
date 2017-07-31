@@ -13,54 +13,64 @@ var llenarModal = function(e){
 }
 */
 
+
+
+
 var llenarModal = function(elId,url,title,des,user,hastag){
-			$('#proyecto-modal').removeClass('hide');
-			$("#proyecto-modal .modal-completo").empty();
-			$("#proyecto-modal .modal-completo").append(`
-				<div class="close">X</div>	
-				<div class="caja-modal">
-					<div class="iconos-top">
-						<i class="fa fa-upload" aria-hidden="true"></i>
-						<i class="fa fa-check" aria-hidden="true"></i>
-     					<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-     					<div class="guardar">
-     						<a href="#"><i class="fa fa-thumb-tack" aria-hidden="true"></i>Guardar</a>
-     					</div>
-					</div>
-					<div class="text-title">
-						<h4>`+title+`</h4>
-					</div>
-					<div class="img-modal">
-						<img src="dist/img/`+url+`" id="img-`+ elId +`" alt="">
-					</div>	
-					<div class="iconos-top">
-						<i class="fa fa-upload" aria-hidden="true"></i>
-						<i class="fa fa-check" aria-hidden="true"></i>
-     					<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-     					<div class="guardar">
-     						<a href="#"><i class="fa fa-thumb-tack" aria-hidden="true"></i> Guardar</a>
-     					</div>
-					</div>
-					<div class="usuario">
-						<span>M</span>
-						<p class="name">`+ user +`</p>
-						<p>#`+ hastag +`</p>										
-					</div>
-					<div class="leer">
-						<a href="#">Leerlo</a>	
-					</div>	
-					<div class="descripcion">
-						<p>`+des+`</p>					
-					</div>			
-				</div>`);
-			$(".close").click(function(event) {
-				$("#proyecto-modal").addClass('hide');
-			});		
+	$('#proyecto-modal').removeClass('hide');
+	$("#proyecto-modal .modal-completo").empty();
+	$("#proyecto-modal .modal-completo").append(`
+		<div class="close">X</div>	
+		<div class="mas">+</div>
+		<div class="intr">?</div>		
+		<div class="caja-modal">
+			<div class="iconos-top">
+				<i class="fa fa-upload" aria-hidden="true"></i>
+				<i class="fa fa-check" aria-hidden="true"></i>
+     			<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+     			<div class="guardar">
+     				<a href="#"><i class="fa fa-thumb-tack" aria-hidden="true"></i>Guardar</a>
+     			</div>
+			</div>
+			<div class="text-title">
+				<h4>`+title+`</h4>
+			</div>
+			<div class="img-modal">
+				<img src="dist/img/`+url+`" id="img-`+ elId +`" alt="">
+			</div>	
+			<div class="iconos-top">
+				<i class="fa fa-upload" aria-hidden="true"></i>
+				<i class="fa fa-check" aria-hidden="true"></i>
+     			<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+     			<div class="guardar">
+     				<a href="#"><i class="fa fa-thumb-tack" aria-hidden="true"></i> Guardar</a>
+     			</div>
+			</div>
+			<div class="usuario">
+				<span>M</span>
+				<p class="name">`+ user +`</p>
+				<p>#`+ hastag +`</p>										
+			</div>
+			<div class="leer">
+				<a href="#">Leerlo</a>	
+			</div>	
+			<div class="descripcion">
+				<p>`+des+`</p>					
+			</div>			
+		</div>`);
+	$(".close").click(function(event) {
+		$("#proyecto-modal").addClass('hide');
+	});		
 }
 
 $(document).ready(function(){
-
 	/*
+	Para el scroll:
+	Encontre esta web: https://www.adictosaltrabajo.com/tutoriales/jquery-waypoints-realizando-acciones-al-llegar-a-un-punto-de-la-pagina-con-el-scroll/
+
+	Pero con 'for' no me funciono el modal, así que deje que cuando llegará al final me cargara las 20 imagenes restantes,
+	pero cada vez que se realiza scroll las vuelve a cargar.
+
 	var template = "";	
 	for(var i = 0; i< descripcion.length/2;i++){
 		var elId = descripcion[i].id;	
@@ -96,7 +106,7 @@ $(document).ready(function(){
 		llenarModal(id,url,title,des,user,hastag);
 	});
 	*/
-	
+
 	//Slice genera un nuevo arreglo del indice 0 al 20
 	var veinte = descripcion.slice(0, 20);
 	veinte.forEach(function(e){
@@ -132,8 +142,6 @@ $(document).ready(function(){
 			llenarModal(elId,url,title,des,user,hastag);
 		});		
 	});
-
-
 
 	$(window).scroll(function(){
 		if ($(window).scrollTop() == $(document).height() - $(window).height()){
@@ -173,7 +181,6 @@ $(document).ready(function(){
 			});
 		}					
 	});
-
 });
 
 	

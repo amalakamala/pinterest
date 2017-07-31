@@ -4,12 +4,10 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var minifyCSS = require('gulp-minify-css');
 var webserver = require('gulp-webserver');
-
 /*------ JS ------*/
 gulp.task('script', function(){
 	gulp.src(['node_modules/jquery/dist/jquery.js','assets/js/*.js'])
 		.pipe(concat('script.js'))
-		.pipe(uglify())
 		//carpeta dist
 		.pipe(gulp.dest('dist/js/'));
 });
