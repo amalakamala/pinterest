@@ -20,8 +20,3 @@ El proyecto fue realizado con las siguientes dependencias NPM:
 + Clonar repositorio.
 + Posicionado en nuestro proyecto hacer correr `npm install`para descargar e instalar todas las dependencias utilizadas.
 + Correr gulp para que se realizen las tareas especificadas.
-
-
-![alt text](https://github.com/amalakamala/pinterest/master/dist/img/desktop.png)
-![alt text](https://raw.githubusercontent.com/amakamala/printerest/master/dist/img/modal.png)
-
