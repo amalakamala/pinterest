@@ -97,14 +97,85 @@
 		position: relative;
 		left:35%;
 		margin-top: 50px;
+		margin-bottom:50px;
 		padding: 20px;
+		.iconos-top{
+			padding: 0 20px;
+			.fa{
+				color: $grisIconos;
+				display: inline-block;
+				margin-right:20px;
+			}
+			.guardar{
+				display:inline-block;
+				position: relative;
+				left:45%;
+				a{
+					background-color:$colorbtn;
+					padding: 10px;
+					color:#FFF;
+					text-decoration:none;
+					border-radius:6px;
+					.fa{
+						margin-right:5px;
+						color: #FFF;						
+					}
+				}
+			}
+		}
+		.text-title{
+			h4{
+				margin: 10px 0;
+				color: #404040;
+			}
+		}
 		.img-modal{
 			width: 350px;
-			height: 450px;
+			height: auto;
 			img{
 				width: 100%;
 				background-size: cover;
-				margin:20px;
+				margin:0 20px 20px;
+				border-radius: 6px;
+			}
+		}
+		.usuario{
+			margin: 20px 10px;
+			span{
+				background-color:#ECC2B9;
+				padding: 7px 10px;
+				border-radius:50%;
+				color: #FFF;
+				font-weight:700;
+				font-size:14px;
+				float:left;
+				margin-right:5px;
+			}
+			.name{
+				font-weight:700;
+				word-break: break-all;
+			}
+			p{
+				font-size:10px;
+				margin-right:5px;
+				float:left;
+			}
+		}
+		.leer{
+			a{
+				background-color:#EBEBEB;
+				color: #626262;
+				text-decoration:none;
+				border-radius:6px;
+				padding: 5px 10px;
+				float:right;
+			}
+		}			
+		.descripcion{
+			clear: both;			
+			p{
+				font-size: 12px;
+				padding: 20px 15px;
 			}
 		}
 	}

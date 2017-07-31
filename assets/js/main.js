@@ -16,11 +16,43 @@ var llenarModal = function(e){
 var llenarModal = function(elId,url,title,des,user,hastag){
 			$('#proyecto-modal').removeClass('hide');
 			$("#proyecto-modal .modal-completo").empty();
-			$("#proyecto-modal .modal-completo").append("<div class='close'>X</div>");
-			$("#proyecto-modal .modal-completo").append("<div class='caja'><img src='dist/img/"+ url +"' id='img-"+elId+"'  alt=''>");
-			$("#proyecto-modal .modal-completo").append("<h4>"+ title +"</h4>");
-			$("#proyecto-modal .modal-completo").append("<p>" + des + "</p>");
-			$("#proyecto-modal .modal-completo").append("<p>" + user + "</p></div>");
+			$("#proyecto-modal .modal-completo").append(`
+				<div class="close">X</div>	
+				<div class="caja-modal">
+					<div class="iconos-top">
+						<i class="fa fa-upload" aria-hidden="true"></i>
+						<i class="fa fa-check" aria-hidden="true"></i>
+     					<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+     					<div class="guardar">
+     						<a href="#"><i class="fa fa-thumb-tack" aria-hidden="true"></i>Guardar</a>
+     					</div>
+					</div>
+					<div class="text-title">
+						<h4>`+title+`</h4>
+					</div>
+					<div class="img-modal">
+						<img src="dist/img/`+url+`" id="img-`+ elId +`" alt="">
+					</div>	
+					<div class="iconos-top">
+						<i class="fa fa-upload" aria-hidden="true"></i>
+						<i class="fa fa-check" aria-hidden="true"></i>
+     					<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+     					<div class="guardar">
+     						<a href="#"><i class="fa fa-thumb-tack" aria-hidden="true"></i> Guardar</a>
+     					</div>
+					</div>
+					<div class="usuario">
+						<span>M</span>
+						<p class="name">`+ user +`</p>
+						<p>#`+ hastag +`</p>										
+					</div>
+					<div class="leer">
+						<a href="#">Leerlo</a>	
+					</div>	
+					<div class="descripcion">
+						<p>`+des+`</p>					
+					</div>			
+				</div>`);
 			$(".close").click(function(event) {
 				$("#proyecto-modal").addClass('hide');
 			});		

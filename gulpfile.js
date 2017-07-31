@@ -9,6 +9,7 @@ var webserver = require('gulp-webserver');
 gulp.task('script', function(){
 	gulp.src(['node_modules/jquery/dist/jquery.js','assets/js/*.js'])
 		.pipe(concat('script.js'))
+		.pipe(uglify())
 		//carpeta dist
 		.pipe(gulp.dest('dist/js/'));
 });
